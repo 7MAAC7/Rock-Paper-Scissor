@@ -8,7 +8,7 @@ function getComputerChoice(){
         return ("paper");
     }
     else{
-        return("scissor");
+        return("scissors");
     }
 }
 function getHumanchoice(){
@@ -20,8 +20,8 @@ function playRound(hChoice, cChoice){
         let result = "Draw!"
         return result;
     }
-    else if(hChoice ==="scissor" && cChoice==="rock"){
-        result = "Computer Win, Rock beats scissor";
+    else if(hChoice ==="scissors" && cChoice==="rock"){
+        result = "Computer Win, Rock beats scissors";
         computerScore++;
         return result;
     }
@@ -30,13 +30,13 @@ function playRound(hChoice, cChoice){
         humanScore++;
         return result;
     }
-    else if(hChoice ==="paper" && cChoice==="scissor"){
-        let result = "Computer win, Scissor beats paper!"
+    else if(hChoice ==="paper" && cChoice==="scissors"){
+        let result = "Computer win, Scissors beats paper!"
         computerScore++;
         return result;
     }
-    else if (hChoice ==="rock" && cChoice==="scissor"){
-        let result = "Human win, Rock beats Scissor!"
+    else if (hChoice ==="rock" && cChoice==="scissors"){
+        let result = "Human win, Rock beats Scissors!"
         humanScore++;
         return result;
     }
@@ -45,8 +45,8 @@ function playRound(hChoice, cChoice){
         computerScore++;
         return result;
     }
-    else if(hChoice ==="scissor" && cChoice==="paper"){
-        let result = "Human win, Scissor beats Paper!"
+    else if(hChoice ==="scissors" && cChoice==="paper"){
+        let result = "Human win, Scissors beats Paper!"
         humanScore++;
         return result;
     }
@@ -77,11 +77,11 @@ function playGame(){
     console.log("Human score: " + humanScore);
     console.log("Computer score: " + computerScore);
     if(computerScore > humanScore){
-        return console.log("Computer win :",computerScore);
+        return console.log("Computer win : ",computerScore);
 
     }
     else if(computerScore< humanScore){
-        return console.log("Human win: ",humanScore)
+        return console.log("Human win : ",humanScore)
 
     }
     else{
